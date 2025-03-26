@@ -1,6 +1,11 @@
+import { UserButton } from "@clerk/nextjs";
+
 export default function Home() {
   return (
-        <p>Dashboard (Protected) </p>
+        <div>
+          <p>Dashboard (Protected) </p>
+          <UserButton />
+        </div>
     )
     
 }

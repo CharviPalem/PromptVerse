@@ -1,8 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# SaaS AI Platform
 
-First, run the development server:
+This is a **Next.js** project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+##  **Tech Stack**
+- **Frontend:** Next.js 15 (App Router), Tailwind CSS  
+- **Database:** Prisma ORM with MySQL  
+- **Authentication:** Clerk Auth  
+- **Backend:** Node.js (to be added later)  
+- **AI Tools:** Image, Music, Video, and Code generation models  
+
+##  **Getting Started**
+
+First, install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
@@ -18,21 +40,41 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+##  **Configuration**
+1. **Clerk Auth Setup:**  
+   - Create a Clerk account at [Clerk](https://clerk.dev).  
+   - Add your **Clerk API keys** to the `.env.local` file:  
+   ```env
+   NEXT_PUBLIC_CLERK_FRONTEND_API=<your-frontend-api-key>
+   CLERK_SECRET_KEY=<your-secret-key>
+   ```
 
-## Learn More
+2. **Prisma & MySQL Setup:**  
+   - Update the `.env` file with your database connection string:  
+   ```env
+   DATABASE_URL="mysql://<user>:<password>@localhost:3306/<db_name>"
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+   - Run Prisma migration:  
+   ```bash
+   npx prisma migrate dev --name init
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+##  **Learn More**
+To learn more about the technologies used, check out the following resources:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Next.js Documentation](https://nextjs.org/docs) – Learn about Next.js features and API.
+- [Tailwind CSS](https://tailwindcss.com/docs) – Styling framework documentation.
+- [Clerk Auth](https://clerk.dev/docs) – Authentication documentation.
+- [Prisma](https://www.prisma.io/docs) – ORM setup and usage.
+- [MySQL](https://dev.mysql.com/doc) – Database documentation.
 
-## Deploy on Vercel
+##  **Deployment**
+The easiest way to deploy your Next.js app is by using [Vercel](https://vercel.com) – the creators of Next.js.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+For production deployment:
+```bash
+vercel deploy
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-
+---
