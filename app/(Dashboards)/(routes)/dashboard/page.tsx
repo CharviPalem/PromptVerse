@@ -95,19 +95,19 @@ export default function HomePage() {
                     <h3
                       className={cn(
                         "text-xl font-bold transition-colors duration-300",
-                        hoveredCard === tool.href ? "text-white" : "text-foreground",
+                        hoveredCard === tool.href ? "text-blue" : "text-foreground",
                       )}
                     >
                       {tool.label}
                     </h3>
                   </div>
                 </CardHeader>
-                {/* <CardContent className="p-6">
+                <CardContent className="p-6">
                   <p className="text-muted-foreground">
                     {tool.description ||
                       `Access our powerful ${tool.label.toLowerCase()} AI tool to enhance your workflow.`}
                   </p>
-                </CardContent> */}
+                </CardContent>
                 <CardFooter className="p-6 pt-0 flex justify-between items-center">
                   <Button
                     variant="ghost"

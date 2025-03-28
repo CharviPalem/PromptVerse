@@ -26,7 +26,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
                 style={{ width: "65vw", height: "100vh" }}
             >
                 <div className="flex justify-between items-center p-4">
-                    <h1 className="text-lg font-bold"></h1>
+                    <h1 className="text-lg font-bold">Menu</h1>
                     <button onClick={toggleSidebar}>
                         <X className="w-10 h-6" />
                     </button>
